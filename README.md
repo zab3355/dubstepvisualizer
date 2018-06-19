@@ -1,0 +1,2 @@
+# dubstepvisualizer
+I was tasked in my Javascript class (IGME 330 - Rich Media Web App Development) to create a Audio Visualizer in Javscript. This Audio Visualizer is able to change colors, shape, frequencies, distort music using delay and analyzer nodes, and more! I made this audio visualizer unique due to it focusing on color changing, curves, and dubstep type music to keep consistency with the theme.
