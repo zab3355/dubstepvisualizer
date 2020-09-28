@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Dubstep Visualizer</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+</head>
+<body>
+    <canvas id="canvas" width="650" height="550" style=" margin-top: 150px;"></canvas>
+      <div id="title"> 
+    <p>Dubstep Visualizer</p>       
+    </div>
+    <div id="controls">
+        <audio controls loop></audio>
+
+        <p></p>
+        <label>
+            <h1>Track:</h1>
+            <select id="trackSelect" >
+                <option value="media/Vinyl-BreakingUpMyBones.mp3">Breaking Up my Bones</option>
+                <option value="media/Matoma-Running Out.mp3">Running Out</option>
+                <option value="media/Tongues-Joywave.mp3">Tongues</option>
+            </select>
+        </label>
+    </div>
+        <br><br>
+        <div id="moreControls">
+        <button id="fsButton">Go Full Screen</button><br>
+        <br>
+        <p id="status">???</p>
+        
+        <div>
+            <label>
+                <h1>Canvas API:</h1> 
+            <select id="canvasApi">
+                <option value="0">Frequency</option>
+                <option value="1">Waveform</option>
+            </select>
+          </label>
+        </div>
+
+        <div>
+            <label>
+                <h1>Display Options:</h1>
+            <select id="modeSelect">
+                <option value="0">Downward Beats</option>
+                <option value="1">Upward Beats</option>
+                <option value="2">Rectangles</option>
+                <option value="3">Circles</option>
+            </select>
+          </label>
+        </div>
+        <h1>Display Modes</h1>
+        <div id="radiusSlider">
+          <label for="slider1">Max Radius</label>
+          <input id="slider1" type="range" min="0.1" max="1.0" step="0.1" value="0.5"/>
+          <span id="sliderStats"></span>
+        </div>
+        <div id="delaySlider1">
+          <label for="delaySlider">Audio Delay</label>
+          <input id="delaySlider" type="range" min="0.0" max="1.0" step="0.1" value="0.0"/>
+          <span  id="delaySliderStats"></span>
+        </div>
+
+        <h1>Color Sliders</h1>
+        <div id="rSlider1">
+          <label for="redSlider">Red</label>
+          <input id="redSlider" type="range" min="0" max="255" step="5" value="255"/>
+          <span id="redSliderStats"></span>
+        </div>
+        <div id="gSlider1">
+          <label for="greSlider">Green</label>
+          <input id="greSlider" type="range" min="0" max="255" step="5" value="0"/>
+          <span id="greSliderStats"></span>
+        </div>
+        <div id="bSlider1">
+          <label for="bluSlider">Blue</label>
+          <input id="bluSlider" type="range" min="0" max="255" step="5" value="0"/>
+          <span id="bluSliderStats"></span>
+        </div>
+        <div id="aSlider1">
+          <label for="aSlider">Alpha</label>
+          <input id="aSlider" type="range" min="0.0" max="1.0" step="0.1" value="0.5"/>
+          <span id="aSliderStats"></span>
+        </div>
+
+        <h1>Curve Effects</h1>
+        <div>
+            <label for="qCurveBox">Quadratic Curve</label>
+            <input type="checkbox" id="qCurveBox">
+        </div>
+        <div>
+            <label for="bCurveBox">Bezier Curve</label>
+            <input type="checkbox" id="bCurveBox">
+        </div>
+        <div>
+            <label for="gradientBox">Background Gradient</label>
+            <input type="checkbox" id="gradientBox">
+        </div>
+        <h1>Default Effects</h1>
+        <div>
+            <label for="tintRedBox">Tint Red Effect</label>
+            <input type="checkbox" id="tintRedBox">
+        </div>
+        <div>
+            <label for="invertBox">Inversion Effect</label>
+            <input type="checkbox" id="invertBox">
+        </div>
+        <div>
+            <label for="noiseBox">Noise Effect</label>
+            <input type="checkbox" id="noiseBox">
+        </div>
+        <div>
+            <label for="linesBox">Line Effect</label>
+            <input type="checkbox" id="linesBox">
+        </div>
+        <div>
+            <label for="grayscaleBox">Black and White</label>
+            <input type="checkbox" id="grayscaleBox">
+        </div>
+    </div>
+    </body>
+<script src="src/dubstepvisualizer.js"></script>
+</html>
